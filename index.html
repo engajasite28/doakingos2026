@@ -2,72 +2,114 @@
 <html>
 <head>
   <title>Doa Kingos 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #ffffff, #ffe6e6);
       text-align: center;
-      background-color: #ffffff;
-      padding: 50px;
+      padding: 40px 20px;
     }
+
     h1 {
+      font-size: 42px;
       color: #b30000;
-      font-size: 40px;
+      margin-bottom: 10px;
     }
+
+    .slogan {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
     .contador {
-      font-size: 60px;
-      margin: 20px 0;
+      font-size: 70px;
+      font-weight: bold;
       color: #b30000;
+      margin: 20px 0;
     }
+
+    .meta {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
     .barra-container {
       width: 100%;
+      max-width: 500px;
+      height: 30px;
       background-color: #eee;
       border-radius: 20px;
+      margin: 0 auto 30px;
       overflow: hidden;
-      margin: 20px 0;
     }
+
     .barra {
-      height: 30px;
+      height: 100%;
       width: 0%;
       background-color: #b30000;
-      transition: width 1s;
+      transition: width 1s ease-in-out;
     }
+
     button {
       padding: 15px 30px;
       font-size: 18px;
       background-color: #b30000;
       color: white;
       border: none;
-      border-radius: 10px;
+      border-radius: 30px;
       cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #800000;
+      transform: scale(1.05);
+    }
+
+    .impacto {
+      margin-top: 50px;
+      font-size: 16px;
+      color: #333;
     }
   </style>
 </head>
 <body>
 
-  <h1>🩸 Doa Kingos 2026</h1>
-  <p>Meta anual: 300 doações</p>
+  <h1>🩸 DOA KINGOS 2026</h1>
+  <div class="slogan">
+    Uma mobilização anual de fãs para salvar vidas através da doação de sangue.
+  </div>
 
   <div class="contador" id="contador">0 / 300</div>
+  <div class="meta">Meta anual: 300 doações</div>
 
   <div class="barra-container">
     <div class="barra" id="barra"></div>
   </div>
 
-  <button onclick="alert('Formulário será adicionado em breve')">
+  <button onclick="alert('Em breve: formulário oficial de registro!')">
     Registrar minha doação
   </button>
+
+  <div class="impacto">
+    Cada doação pode salvar até 4 vidas.<br>
+    Se batermos a meta, podemos impactar até 1.200 vidas em 2026.
+  </div>
 
   <script>
     let doacoes = 0;
     let meta = 300;
 
-    function atualizarContador() {
+    function atualizar() {
       document.getElementById("contador").innerText = doacoes + " / " + meta;
       let porcentagem = (doacoes / meta) * 100;
       document.getElementById("barra").style.width = porcentagem + "%";
     }
 
-    atualizarContador();
+    atualizar();
   </script>
 
 </body>
