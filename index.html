@@ -12,28 +12,28 @@
       padding: 40px 20px;
     }
 
+    .idiomas {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .idiomas a {
+      margin-left: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #b30000;
+    }
+
     h1 {
       font-size: 42px;
       color: #b30000;
-      margin-bottom: 10px;
-    }
-
-    .slogan {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 40px;
     }
 
     .contador {
       font-size: 70px;
       font-weight: bold;
       color: #b30000;
-      margin: 20px 0;
-    }
-
-    .meta {
-      font-size: 18px;
-      margin-bottom: 20px;
     }
 
     .barra-container {
@@ -42,7 +42,7 @@
       height: 30px;
       background-color: #eee;
       border-radius: 20px;
-      margin: 0 auto 30px;
+      margin: 20px auto;
       overflow: hidden;
     }
 
@@ -50,7 +50,6 @@
       height: 100%;
       width: 0%;
       background-color: #b30000;
-      transition: width 1s ease-in-out;
     }
 
     button {
@@ -61,56 +60,27 @@
       border: none;
       border-radius: 30px;
       cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background-color: #800000;
-      transform: scale(1.05);
-    }
-
-    .impacto {
-      margin-top: 50px;
-      font-size: 16px;
-      color: #333;
     }
   </style>
 </head>
 <body>
 
-  <h1>🩸 DOA KINGOS 2026</h1>
-  <div class="slogan">
-    Uma mobilização anual de fãs para salvar vidas através da doação de sangue.
+  <div class="idiomas">
+    <a href="index.html">PT</a>
+    <a href="en.html">EN</a>
+    <a href="es.html">ES</a>
   </div>
 
-  <div class="contador" id="contador">0 / 300</div>
-  <div class="meta">Meta anual: 300 doações</div>
+  <h1>🩸 DOA KINGOS 2026</h1>
+  <p>Meta anual: 300 doações</p>
+
+  <div class="contador">0 / 300</div>
 
   <div class="barra-container">
-    <div class="barra" id="barra"></div>
+    <div class="barra"></div>
   </div>
 
-  <button onclick="alert('Em breve: formulário oficial de registro!')">
-    Registrar minha doação
-  </button>
-
-  <div class="impacto">
-    Cada doação pode salvar até 4 vidas.<br>
-    Se batermos a meta, podemos impactar até 1.200 vidas em 2026.
-  </div>
-
-  <script>
-    let doacoes = 0;
-    let meta = 300;
-
-    function atualizar() {
-      document.getElementById("contador").innerText = doacoes + " / " + meta;
-      let porcentagem = (doacoes / meta) * 100;
-      document.getElementById("barra").style.width = porcentagem + "%";
-    }
-
-    atualizar();
-  </script>
+  <button>Registrar minha doação</button>
 
 </body>
 </html>
