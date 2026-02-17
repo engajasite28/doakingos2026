@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doa Kingos 2026</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #ffffff;
+      padding: 50px;
+    }
+    h1 {
+      color: #b30000;
+      font-size: 40px;
+    }
+    .contador {
+      font-size: 60px;
+      margin: 20px 0;
+      color: #b30000;
+    }
+    .barra-container {
+      width: 100%;
+      background-color: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    .barra {
+      height: 30px;
+      width: 0%;
+      background-color: #b30000;
+      transition: width 1s;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #b30000;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🩸 Doa Kingos 2026</h1>
+  <p>Meta anual: 300 doações</p>
+
+  <div class="contador" id="contador">0 / 300</div>
+
+  <div class="barra-container">
+    <div class="barra" id="barra"></div>
+  </div>
+
+  <button onclick="alert('Formulário será adicionado em breve')">
+    Registrar minha doação
+  </button>
+
+  <script>
+    let doacoes = 0;
+    let meta = 300;
+
+    function atualizarContador() {
+      document.getElementById("contador").innerText = doacoes + " / " + meta;
+      let porcentagem = (doacoes / meta) * 100;
+      document.getElementById("barra").style.width = porcentagem + "%";
+    }
+
+    atualizarContador();
+  </script>
+
+</body>
+</html>
