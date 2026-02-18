@@ -80,17 +80,24 @@
       transition: width 1s ease-in-out;
     }
 
-    button {
-      margin-top: 40px;
-      padding: 16px 50px;
-      font-size: 14px;
-      letter-spacing: 2px;
-      background: #7a1f1f;
-      color: white;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-    }
+.botao {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 16px 50px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  background: #7a1f1f;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.botao:hover {
+  background: #5e1616;
+  transform: translateY(-2px);
+}
 
     .engaja {
       margin-top: 60px;
@@ -151,7 +158,9 @@
   <div class="barra" id="barra"></div>
 </div>
 
-<button>REGISTRAR MI DONACIÓN</button>
+<a href="https://forms.gle/T1idUPskdBPYYDeXA" target="_blank" class="botao">
+  REGISTRAR MI DONACIÓN
+</a>
 
 <div class="engaja">
   <img src="logo.png" alt="Engaja Pri Reis">
